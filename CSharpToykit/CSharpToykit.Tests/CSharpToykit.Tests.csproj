@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataUtil.cs" />
+    <Compile Include="DataUtisTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -14,7 +14,7 @@ namespace /*<com>*/FineGameDesign.Utils
     // Python:  len(items)
     // Some of these use different method names or property names in different languages.
     // 
-    public sealed class DataUtil
+    public sealed class DataUtils
     {
         // http://stackoverflow.com/questions/222598/how-do-i-clone-a-generic-list-in-c
         public static List<T> CloneList<T>(List<T> original)

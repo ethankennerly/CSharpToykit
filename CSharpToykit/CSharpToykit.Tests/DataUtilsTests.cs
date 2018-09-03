@@ -3,7 +3,7 @@ using System.Collections.Generic/*<List>*/;
 
 namespace FineGameDesign.Utils
 {
-    public sealed class TestDataUtil
+    public sealed class DataUtilsTests
     {
         private static List<int> List354()
         {
@@ -19,35 +19,35 @@ namespace FineGameDesign.Utils
         {
             List<int> numbers = List354();
             Assert.AreEqual("3, 5, 4",
-                DataUtil.Join(numbers, ", "));
+                DataUtils.Join(numbers, ", "));
         }
 
         [Test]
         public void ClearList()
         {
             List<int> numbers = List354();
-            DataUtil.Clear(numbers);
-            Assert.AreEqual(0, DataUtil.Length(numbers));
+            DataUtils.Clear(numbers);
+            Assert.AreEqual(0, DataUtils.Length(numbers));
         }
 
         [Test]
         public void ClearListAtEnd()
         {
             List<int> numbers = List354();
-            DataUtil.Clear(numbers, 2);
-            Assert.AreEqual(2, DataUtil.Length(numbers));
+            DataUtils.Clear(numbers, 2);
+            Assert.AreEqual(2, DataUtils.Length(numbers));
             Assert.AreEqual("3, 5",
-                DataUtil.Join(numbers, ", "));
+                DataUtils.Join(numbers, ", "));
         }
 
         [Test]
         public void ClearListAtMiddle()
         {
             List<int> numbers = List354();
-            DataUtil.Clear(numbers, 1);
-            Assert.AreEqual(1, DataUtil.Length(numbers));
+            DataUtils.Clear(numbers, 1);
+            Assert.AreEqual(1, DataUtils.Length(numbers));
             Assert.AreEqual("3",
-                DataUtil.Join(numbers, ", "));
+                DataUtils.Join(numbers, ", "));
         }
     }
 }
