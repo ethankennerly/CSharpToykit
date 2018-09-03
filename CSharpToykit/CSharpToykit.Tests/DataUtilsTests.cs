@@ -1,5 +1,5 @@
-using NUnit.Framework/*<Test>*/;
-using System.Collections.Generic/*<List>*/;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace FineGameDesign.Utils
 {
@@ -15,7 +15,7 @@ namespace FineGameDesign.Utils
         }
 
         [Test]
-        public void JoinListOfInt()
+        public void Join_ListOfInt_Concatenates()
         {
             List<int> numbers = List354();
             Assert.AreEqual("3, 5, 4",
@@ -23,29 +23,29 @@ namespace FineGameDesign.Utils
         }
 
         [Test]
-        public void ClearList()
+        public void Clear_List_Empties()
         {
             List<int> numbers = List354();
             DataUtils.Clear(numbers);
-            Assert.AreEqual(0, DataUtils.Length(numbers));
+            Assert.AreEqual(0, numbers.Count);
         }
 
         [Test]
-        public void ClearListAtEnd()
+        public void Clear_ListAtEnd_Truncates()
         {
             List<int> numbers = List354();
             DataUtils.Clear(numbers, 2);
-            Assert.AreEqual(2, DataUtils.Length(numbers));
+            Assert.AreEqual(2, numbers.Count);
             Assert.AreEqual("3, 5",
                 DataUtils.Join(numbers, ", "));
         }
 
         [Test]
-        public void ClearListAtMiddle()
+        public void Clear_ListAtMiddle_Truncates()
         {
             List<int> numbers = List354();
             DataUtils.Clear(numbers, 1);
-            Assert.AreEqual(1, DataUtils.Length(numbers));
+            Assert.AreEqual(1, numbers.Count);
             Assert.AreEqual("3",
                 DataUtils.Join(numbers, ", "));
         }

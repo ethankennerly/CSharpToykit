@@ -2,91 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace /*<com>*/FineGameDesign.Utils
+namespace FineGameDesign.Utils
 {
-    //
-    // Another option is an extension method.
-    // In-case someone else already made a different extension method, 
-    // or the language has different syntax, I used static functions.
-    // For examples of divergent syntax:
-    // ActionScript:  items.length
-    // C#:  items.Count
-    // Python:  len(items)
-    // Some of these use different method names or property names in different languages.
-    // 
     public sealed class DataUtils
     {
-        // http://stackoverflow.com/questions/222598/how-do-i-clone-a-generic-list-in-c
-        public static List<T> CloneList<T>(List<T> original)
-        {
-            return new List<T>(original);
-        }
-
-        public static int Length<T>(List<T> data)
-        {
-            return data.Count;
-        }
-
-        public static int Length<T, U>(Dictionary<T, U> items)
-        {
-            return items.Count;
-        }
-
-        public static int Length(ArrayList elements)
-        {
-            return elements.Count;
-        }
-
-        public static int Length<T>(T[] elements)
-        {
-            return elements.Length;
-        }
-
-        public static int Length(string text)
-        {
-            return text.Length;
-        }
-
-        public static int IndexOf<T>(ArrayList elements, T target)
-        {
-            return elements.IndexOf(target);
-        }
-
-        public static int IndexOf<T>(List<T> elements, T target)
-        {
-            return elements.IndexOf(target);
-        }
-
-        public static int IndexOf<T>(T[] elements, T target)
-        {
-            return Array.IndexOf(elements, target);
-        }
-
-        public static int IndexOf(string text, string target)
-        {
-            return text.IndexOf(target);
-        }
-
-        public static int LastIndexOf<T>(ArrayList elements, T target)
-        {
-            return elements.LastIndexOf(target);
-        }
-
-        public static int LastIndexOf<T>(List<T> elements, T target)
-        {
-            return elements.LastIndexOf(target);
-        }
-
-        public static int LastIndexOf<T>(T[] elements, T target)
-        {
-            return Array.LastIndexOf(elements, target);
-        }
-
-        public static int LastIndexOf(string text, string target)
-        {
-            return text.LastIndexOf(target);
-        }
-
         public static void Clear<T>(T[] items, int startIndex = 0)
         {
             Array.Clear(items, startIndex, items.Length);
@@ -254,16 +173,6 @@ namespace /*<com>*/FineGameDesign.Utils
             return item;
         }
 
-        public static void RemoveAt<T>(List<T> items, int index)
-        {
-            items.RemoveAt(index);
-        }
-
-        public static void RemoveAt(ArrayList items, int index)
-        {
-            items.RemoveAt(index);
-        }
-
         public static List<T> Slice<T>(List<T> items, int start, int end)
         {
             List<T> sliced = new List<T>();
@@ -280,56 +189,6 @@ namespace /*<com>*/FineGameDesign.Utils
                 sliced.Add(items[index]);
             }
             return sliced;
-        }
-
-        public static T Shift<T>(List<T> items)
-        {
-            T item = (T)items[0];
-            items.RemoveAt(0);
-            return item;
-        }
-
-        public static object Shift(ArrayList items)
-        {
-            object item = items[0];
-            items.RemoveAt(0);
-            return item;
-        }
-
-        public static List<T> ToListItems<T>(T[] rest)
-        {
-            List<T> aList = new List<T>();
-            for (int i = 0; i < rest.Length; i++) {
-                aList.Add(rest[i]);
-            }
-            return aList;
-        }
-
-        public static List<T> ToList<T>(params T[] rest)
-        {
-            List<T> aList = new List<T>();
-            for (int i = 0; i < rest.Length; i++) {
-                aList.Add(rest[i]);
-            }
-            return aList;
-        }
-
-        public static List<T> ToListItems<T>(ArrayList elements)
-        {
-            List<T> aList = new List<T>();
-            for (int i = 0; i < elements.Count; i++) {
-                aList.Add((T)elements[i]);
-            }
-            return aList;
-        }
-
-        public static ArrayList ToArrayList<T>(List<T> aList)
-        {
-            ArrayList items = new ArrayList();
-            for (int i = 0; i < aList.Count; i++) {
-                aList.Add(aList[i]);
-            }
-            return items;
         }
     }
 }
