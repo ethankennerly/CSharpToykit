@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpToykit", "CSharpToykit.csproj", "{A5CFDB15-A204-4DDD-868D-1A2F23DB23EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpToykit.Tests", "CSharpToykit.Tests\CSharpToykit.Tests.csproj", "{214F1A58-4EE4-4F58-92C6-E69787E600D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5CFDB15-A204-4DDD-868D-1A2F23DB23EC} = {A5CFDB15-A204-4DDD-868D-1A2F23DB23EC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5CFDB15-A204-4DDD-868D-1A2F23DB23EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CFDB15-A204-4DDD-868D-1A2F23DB23EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CFDB15-A204-4DDD-868D-1A2F23DB23EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CFDB15-A204-4DDD-868D-1A2F23DB23EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214F1A58-4EE4-4F58-92C6-E69787E600D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214F1A58-4EE4-4F58-92C6-E69787E600D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214F1A58-4EE4-4F58-92C6-E69787E600D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214F1A58-4EE4-4F58-92C6-E69787E600D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD9642C5-F1B3-4D9C-87AD-D1547593F1B8}
+	EndGlobalSection
+EndGlobal
